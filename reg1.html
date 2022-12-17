@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="./reg1.css">
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <p>Please fill out this form with required information</p>
+
+    <div class="form">
+
+       <div class="input-form">
+        <div class="first-name" for="first-name" label="first-name">Enter your First Name:
+        </div>
+        <input id="first-name" type="text">
+      
+        <div class="last-name" for="last-name">Enter your Last Name:</div>
+        <input id="last-name" type="text">
+        <div class="email" for="email">Enter your Email: </div>
+            <input id="email" type="email">
+       
+        <div class="password" for="password">Create a New Password:   </div>
+            <input id="password" type="password" pattern="[a-z0-5]{8,}" required>
+       </div> 
+
+       <!--Input Buttons-->
+         
+       <div class="input-button">
+        <div class="Personal-acct" for="Personal-acct">Personal Account: <input id="Personal-acct" type="radio"></div>
+       
+        <div class="business-acct">Business Account: <input id="Business-acct" type="radio"></div>
+        <div class="terms" for="terms and conditions"></div>
+        <input id="term and conditions" type="checkbox" required>I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/"> Terms and conditions</a>
+        
+       </div>
+
+       <!---Upload-->
+       <div class="upload-file">
+
+        <div class="upload">Upload a profile picture:</div>
+        <input type="file">
+        <div class="age">input your age(Years)</div>
+        <input type="number" min="13" max="123">
+        <div class="us">How did you hear about us?
+         <select id="referer">
+          
+            <option value="">(select one)</option>
+            <option value="1">Facebook</option>
+            <option value="2">Twitter</option>
+            <option value="3">Friends</option>
+            <option value="4">Others</option>
+         </select>
+        </div>
+
+        <div class="bio">Provide a bio</div>
+        <textarea id="bio" rows="3" cols="30" placeholder="fill the form well"></textarea>
+
+       </div>
+       <button>Submit</button>
+    </div>
+</body>
+</html>
