@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>My test page</title>
+
+    <style>
+        form {
+  /* Center the form on the page */
+  margin: 0 auto;
+  width: 400px;
+  /* Form outline */
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+label {
+  /* Uniform size & alignment */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+
+  /* Uniform text field size */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* Match form field borders */
+  border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  /* Additional highlight for focused elements */
+  border-color: #000;
+}
+
+textarea {
+  /* Align multiline text fields with their labels */
+  vertical-align: top;
+
+  /* Provide space to type some text */
+  height: 5em;
+}
+
+.button {
+  /* Align buttons with the text fields */
+  padding-left: 90px; /* same size as the label elements */
+  margin:20px;
+}
+
+button {
+  /* This extra margin represent roughly the same space as the space
+     between the labels and their text fields */
+  margin-left: 0.5em;
+}
+.button{
+    list-style: none;
+}
+
+input[type="email"]:invalid {
+  border: 1px solid #D55C5F;
+  color: #D55C5F;
+  box-shadow: none;
+}
+
+
+.form-row select {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;            /* This won't work in Chrome or Safari */
+  -webkit-appearance: none;   /* This will make it work */
+}
+
+.form-row .checkbox-label {
+  margin-bottom: 0;
+}
+
+
+    </style>
+  </head>
+  <body>
+
+    <form action="/my-handling-form-page" method="post">
+        <ul>
+          <li>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name" />
+          </li>
+          <li>
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="user_email" />
+          </li>
+          <li>
+            <label for="msg">Message:</label>
+            <textarea id="msg" name="user_message"></textarea>
+          </li>
+        </ul>
+
+        <li class="button">
+            <button type="submit">Send your message</button>
+          </li>
+          
+      </form>
+
+      <div>
+        <label for="username">Name: <span aria-label="required">*</span></label>
+        <input id="username" type="text" name="username" />
+      </div>
+
+      
+    <p>This is my page</p>
+
+
+    <fieldset class='legacy-form-row'>
+      <legend>Type of Talk</legend>
+      <input id='talk-type-1'
+             name='talk-type'
+             type='radio'
+             value='main-stage' />
+      <label for='talk-type-1' class='radio-label'>Main Stage</label>
+      <input id='talk-type-2'
+             name='talk-type'
+             type='radio'
+             value='workshop'
+             checked />
+      <label for='talk-type-2' class='radio-label'>Workshop</label>
+    </fieldset>
+
+    <div class='form-row'>
+      <label for='t-shirt'>T-Shirt Size</label>
+      <select id='t-shirt' name='t-shirt'>
+        <option value='xs'>Extra Small</option>
+        <option value='s'>Small</option>
+        <option value='m'>Medium</option>
+        <option value='l'>Large</option>
+      </select>
+    </div>
+
+
+    <div class='form-row'>
+      <label class='checkbox-label' for='available'>
+      <input id='available'
+             name='available'
+             type='checkbox'
+             value='is-available'/>
+      <span>I’m actually available the date of the talk</span>
+      </label>
+    </div>
+  </body>
+</html>
